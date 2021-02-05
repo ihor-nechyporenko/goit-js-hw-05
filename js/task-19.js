@@ -22,12 +22,11 @@ class Admin extends User {
     };
   
     accessLevel;
-    blacklistedEmails;
+    blacklistedEmails = [];
   
-    constructor({ email, accessLevel, blacklistedEmails }) {
+    constructor({ email, accessLevel }) {
       super(email);
       this.accessLevel = accessLevel;
-      this.blacklistedEmails = [];
     }
 
     blacklist(email) {
